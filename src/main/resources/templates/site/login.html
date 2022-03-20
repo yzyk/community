@@ -37,7 +37,7 @@
 						<label for="password" class="col-sm-2 col-form-label text-right">密码:</label>
 						<div class="col-sm-10">
 							<!--判断是否有错误信息，否则div内的错误不显示-->
-							<input type="password" class="form-control is-invalid"
+							<input type="password"
 								   th:class="|form-control ${passwordMsg!=null?'is-invalid':''}|"
 								   th:value="${param.password}"
 								   id="password" name="password" placeholder="请输入您的密码!" required>
@@ -63,8 +63,8 @@
 					<div class="form-group row mt-4">
 						<div class="col-sm-2"></div>
 						<div class="col-sm-10">
-							<input type="checkbox" id="remember-me" name="rememberme"
-								   th:checked="${param.rememberme}">
+							<input type="checkbox" id="remember-me" name="rememberMe"
+								   th:checked="${param.rememberMe}">
 							<label class="form-check-label" for="remember-me">记住我</label>
 							<a th:href="@{/user/forgetPassword}" class="text-danger float-right">忘记密码?</a>
 						</div>
