@@ -12,13 +12,18 @@ function publish() {
     //    //     xhr.setRequestHeader(header, token);
     //    // });
 
+
+
+
     // 获取标题和内容
     var title = $("#recipient-name").val();
-    var content = $("#message-text").val().replace(/\r\n/g, '<br/>').replace(/\n/g, '<br/>').replace(/\s/g, ' ');
+    var content = $("#message-text").val();
     // 发送异步请求(POST)
     $.post(
         CONTEXT_PATH + "/discuss/add",
+        // send the parameters to controller
         {"title":title,"content":content},
+        // get data from server
         function(data) {
             data = $.parseJSON(data);
             // 在提示框中显示返回消息

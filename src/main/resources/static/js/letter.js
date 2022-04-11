@@ -7,7 +7,7 @@ function send_letter() {
     $("#sendModal").modal("hide");
 
     var toName = $("#recipient-name").val();
-    var content = $("#message-text").val().replace(/\r\n/g, '<br/>').replace(/\n/g, '<br/>').replace(/\s/g, ' ');
+    var content = $("#message-text").val();
     $.post(
         CONTEXT_PATH + "/letter/send",
         {"toName":toName,"content":content},

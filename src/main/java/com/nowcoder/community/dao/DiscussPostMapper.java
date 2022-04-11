@@ -15,4 +15,10 @@ public interface DiscussPostMapper {
     // if only one param and used in <if>, then should use this alias
     int selectDiscussPostRows(@Param("userId") int userId);
 
+    int insertDiscussPost(DiscussPost discussPost);
+
+    DiscussPost selectDiscussPostById(int id);
+
+    int updateCommentCount(int id, int commentCount);
+
 }

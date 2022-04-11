@@ -22,13 +22,13 @@
 				<div class="position-relative">
 					<ul class="nav nav-tabs">
 						<li class="nav-item">
-							<a th:class="|nav-link ${infoMode==0?'active':''}|" th:href="@{|/user/profile/${user.id}|}">个人信息</a>
+							<a class="nav-link">个人信息</a>
 						</li>
 						<li class="nav-item">
-							<a th:class="|nav-link ${infoMode==1?'active':''}|" th:href="@{|/user/mypost/${user.id}|}" th:text="${loginUser.id!=user.id?'它的帖子':'我的帖子'}">我的帖子</a>
+							<a class="nav-link">我的帖子</a>
 						</li>
 						<li class="nav-item">
-							<a th:class="|nav-link ${infoMode==2?'active':''}|" th:href="@{|/user/mycomment/${user.id}|}" th:text="${loginUser.id!=user.id?'它的评论':'我的评论'}">我的评论</a>
+							<a class="nav-link">我的评论</a>
 						</li>
 					</ul>
 				</div>
@@ -40,7 +40,7 @@
 							<span th:utext="${user.username}">user</span>
 							<input type="hidden" id="entityId" th:value="${user.id}">
 							<button type="button" th:class="|btn ${hasFollowed?'btn-secondary':'btn-info'} btn-sm float-right mr-5 follow-btn|"
-									th:text="${hasFollowed?'已关注':'关注TA'}" th:if="${loginUser!=null&&loginUser.id!=user.id}">关注TA</button>
+									th:text="${hasFollowed?'Followed':'Follow'}" th:if="${loginUser!=null&&loginUser.id!=user.Id}">关注TA</button>
 						</h5>
 						<div class="text-muted mt-3">
 							<span>注册于 <i class="text-muted" th:text="${#dates.format(user.createTime,'yyyy-MM-dd HH:mm:ss')}">2015-06-12 15:20:12</i></span>

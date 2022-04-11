@@ -16,4 +16,13 @@ public interface CommunityConstant {
 
     // expiration time for login ticket when remembering me
     int REMEMBER_EXPIRED_SECONDS = 3600 * 24 * 100;
+
+    // entity type for post
+    int ENTITY_TYPE_POST = 1;
+
+    // entity type for comment
+    int ENTITY_TYPE_COMMENT = 2;
+
+    // entity type for user
+    int ENTITY_TYPE_USER = 3;
 }
